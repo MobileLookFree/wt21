@@ -159,7 +159,10 @@ input[type=checkbox]:checked ~ label {
     width: 50%;
     margin: 0 auto;
     max-width: 1240px;
-    padding: 40px;
+    margin-top: 100px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 40px;
     transform: translate3d(0, 0, 0);
     transition: transform .4s;
 }
