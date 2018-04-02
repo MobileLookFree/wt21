@@ -1,0 +1,259 @@
+@media screen and (min-device-width: 480px){
+    h1{
+        font-size: 38px; 
+    }
+
+    p{
+        font-size: 24px;
+    }
+}
+
+@media screen and (min-device-width: 640px){
+    h1{
+        font-size: 36px; 
+    }
+
+    p{
+        font-size: 22px;
+    }
+}
+
+@media screen and (min-device-width: 768px){
+    h1{
+        font-size: 34px; 
+    }
+
+    p{
+        font-size: 20px;
+    }
+}
+
+@media screen and (min-device-width: 1024px){
+    h1{
+        font-size: 33px; 
+    }
+
+    p{
+        font-size: 20px;
+    }
+}
+
+@media only screen and (max-width: 1920px){
+    h1{
+        font-size: 32px; 
+    }
+
+    p{
+        font-size: 20px;
+    }
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    font-family: 'Noto Sans', sans-serif;
+    font-size: 16px;
+    font-weight: 900;
+}
+
+.container {
+    display: flex;
+    min-height: 100%;
+}
+
+img{
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+    padding: 10px 0 10px;
+}
+
+p{
+    line-height: 1.5;
+}
+
+input[type=checkbox] {
+    position: absolute;
+    opacity: 0;
+}
+
+#toggle {
+    position: absolute;
+    cursor: pointer;
+    left:-100%;
+    top:-100%;
+}
+  
+#toggle + label {
+    position:absolute;
+    cursor:pointer;
+    background: #3B5386;
+    width: 100px;
+    border-radius: 5px;
+    padding: 8px 5px;
+    color: #FFF;
+    line-height: 30px;
+    font-size: 16px;
+    text-align:center;
+    cursor: pointer;
+    margin: 20px 20px;
+}
+
+#toggle + label:after {
+    content:"Меню" 
+}
+
+#toggle:checked ~ .message {
+    top: 0;
+}
+  
+#toggle:checked ~ .container {
+    margin-top: 250px;
+}
+  
+#toggle:checked + label {
+    background:#dd6149;
+}
+  
+#toggle:checked + label:after {
+    content:"Закрыть"
+}
+
+label {
+    position: absolute;
+    top: 10px;
+    left: 40px;
+    z-index: 1;
+    display: block;
+    font-size:3em;
+    color: #444;
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+    transform: translate3d(0, 0, 0);
+    transition: transform .4s;
+}
+
+input[type=checkbox]:checked ~ label {
+    transform: translate3d(250px, 0, 0);
+}
+
+.content {
+    width: 50%;
+    margin: 0 auto;
+    max-width: 1240px;
+    padding: 40px;
+    transform: translate3d(0, 0, 0);
+    transition: transform .4s;
+}
+
+input[type=checkbox]:checked ~ .content {
+    transform: translate3d(250px, 0, 0);
+}
+
+input[type=checkbox]:checked ~ .slide-menu {
+    transform: translate3d(0, 0, 0);
+}
+
+input[type=checkbox]:checked ~ .slide-menu .menu li {
+    width: 100%;
+}
+ 
+.slide-menu {
+    transform: translate3d(-250px, 0, 0);
+    position: absolute;
+    width: 250px;
+    background: #3A4168;
+    color: white;
+    left: 0;
+    height: 100%;
+    transition: all .4s;
+ }
+
+.slide-menu h1 {
+    margin: 10px;
+ }
+
+.menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.menu a {
+    display: block;
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.1em;
+    padding: 15px;
+
+}
+
+.menu a:hover {
+    color: #56719A;
+}
+
+.login{
+    background-color: white;
+    color: #3A4168 !important;
+}
+
+.modal {
+    display: none; 
+    position: fixed; 
+    z-index: 1; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    background-color: rgba(0,0,0,0.4); 
+    animation: fontbulger 2s infinite;
+}
+
+.modal-content {
+    background-color: white;
+    color: #3A4168;
+    margin: 15% auto; 
+    padding: 20px;
+    width: 50%;
+}
+
+.close {
+    color: #3A4168;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+@keyframes fontbulger {
+    0% {
+        background: blue;
+    }
+    20%{
+        background: fuchsia;
+    }
+    40%{
+        background: darkviolet;
+    }
+    60%{
+        background: darkturquoise
+    }
+    80% {
+      background: mediumspringgreen ;
+    }
+    100% {
+      background: mediumblue;
+    }
+}
