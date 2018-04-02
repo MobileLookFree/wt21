@@ -6,6 +6,9 @@
     p{
         font-size: 24px;
     }
+    .content {
+        width: 80%;
+    }
 }
 
 @media screen and (min-device-width: 640px){
@@ -15,6 +18,9 @@
 
     p{
         font-size: 22px;
+    }
+    .content {
+        width: 70%;
     }
 }
 
@@ -26,6 +32,9 @@
     p{
         font-size: 20px;
     }
+    .content {
+        width: 70%;
+    }
 }
 
 @media screen and (min-device-width: 1024px){
@@ -35,6 +44,9 @@
 
     p{
         font-size: 20px;
+    }
+    .content {
+        width: 60%;
     }
 }
 
